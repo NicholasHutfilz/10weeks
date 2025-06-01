@@ -15,9 +15,13 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata: Metadata = {
-  title: "10 Weeks - 10 Projects",
-  description: "A magazine-style showcase of 10 projects over 10 weeks",
-  keywords: ["projects", "portfolio", "magazine", "showcase"],
+  title: "10 Weeks - Nicholas Hutfilz",
+  description: "How much can I improve my life in 10 weeks? Let's find out.",
+  keywords: ["10 weeks", "nicholas hutfilz", "10 weeks hutfilz", "10 weeks nicholas hutfilz", "10 weeks 10 projects"],
+  icons: {
+    icon: '/favicon.ico',
+    apple: '/apple-icon.png',
+  },
 };
 
 export default function RootLayout({
