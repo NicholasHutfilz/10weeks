@@ -7,7 +7,6 @@ import Image from "next/image";
 import Link from "next/link";
 import { ExternalLink } from "lucide-react";
 import { useEffect, useState } from "react";
-import { usePathname } from "next/navigation";
 import { Project } from "@/lib/projects";
 
 interface ProjectContentProps {
@@ -43,8 +42,6 @@ const calculateTimeRemaining = (projectId: number) => {
 };
 
 export function ProjectContent({ project, projectId }: ProjectContentProps) {
-  const pathname = usePathname();
-  
   // For direction tracking between projects
   const [direction, setDirection] = useState<"left" | "right">("right");
   const [prevId, setPrevId] = useState<number | null>(null);

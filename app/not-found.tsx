@@ -9,7 +9,7 @@ export default function NotFound() {
         <div className="vintage-border p-8 mb-8">
           <h2 className="text-2xl font-bold mb-4">Project Not Found</h2>
           <p className="text-lg mb-8">
-            The project you're looking for doesn't exist in this issue.
+            The project you&apos;re looking for doesn&apos;t exist in this issue.
           </p>
           <Link href="/">
             <Button>Return to Home</Button>

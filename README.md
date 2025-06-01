@@ -19,11 +19,12 @@ A magazine-style showcase website featuring 10 projects over the course of 10 we
 
 ## Tech Stack
 
-- Next.js 14+
+- Next.js 15
 - TypeScript
 - Tailwind CSS
 - Shadcn UI
 - React
+- Framer Motion
 
 ## Development
 
@@ -40,14 +41,3 @@ npm run build
 # Start production server
 npm start
 ```
-
-## Project Structure
-
-- `app/` - Next.js application routes and layouts
-- `components/` - Reusable UI components
-- `lib/` - Utility functions and shared code
-- `public/` - Static assets
-
-## License
-
-MIT

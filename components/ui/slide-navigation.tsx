@@ -1,25 +1,41 @@
 "use client";
 
-import { useCallback, useEffect, useRef } from 'react';
+import { useCallback, useEffect, useRef, useState } from 'react';
 import { Button } from '@/components/ui/button';
 import { ChevronLeft, ChevronRight } from 'lucide-react';
 import Link from 'next/link';
-import { useRouter, usePathname } from 'next/navigation';
+import { useRouter } from 'next/navigation';
 
 interface SlideNavigationProps {
   totalSlides: number;
   currentSlide: number;
-  baseRoute: string;
 }
 
-export function SlideNavigation({ totalSlides, currentSlide, baseRoute }: SlideNavigationProps) {
+export function SlideNavigation({ totalSlides, currentSlide }: SlideNavigationProps) {
   const router = useRouter();
-  const pathname = usePathname();
   const wheelTimeoutRef = useRef<NodeJS.Timeout | null>(null);
   const wheelLockRef = useRef(false);
+  const [isMobile, setIsMobile] = useState(false);
 
   const isFirstSlide = currentSlide === 0;
   const isLastSlide = currentSlide === totalSlides - 1;
+
+  // Check if the device is mobile
+  useEffect(() => {
+    const checkMobile = () => {
+      setIsMobile(window.innerWidth < 768);
+    };
+    
+    // Check on mount
+    checkMobile();
+    
+    // Listen for resize events
+    window.addEventListener('resize', checkMobile);
+    
+    return () => {
+      window.removeEventListener('resize', checkMobile);
+    };
+  }, []);
 
   const navigatePrev = useCallback(() => {
     if (!isFirstSlide) {
@@ -57,15 +73,22 @@ export function SlideNavigation({ totalSlides, currentSlide, baseRoute }: SlideN
     };
   }, [navigateNext, navigatePrev]);
 
-  // Wheel navigation with debounce
+  // Wheel navigation with debounce - only on desktop
   useEffect(() => {
+    // Don't enable wheel navigation on mobile
+    if (isMobile) return;
+    
     const handleWheel = (e: WheelEvent) => {
       // If locked, don't process wheel events
       if (wheelLockRef.current) return;
 
-      // Determine scroll direction and threshold
+      // Only use horizontal wheel events
       const isHorizontalScroll = Math.abs(e.deltaX) > Math.abs(e.deltaY);
-      const delta = isHorizontalScroll ? e.deltaX : e.deltaY;
+      
+      // On mobile/vertical layouts, allow normal scrolling
+      if (!isHorizontalScroll) return;
+      
+      const delta = e.deltaX;
       const threshold = 50; // Adjust sensitivity
 
       if (Math.abs(delta) > threshold) {
@@ -91,21 +114,21 @@ export function SlideNavigation({ totalSlides, currentSlide, baseRoute }: SlideN
       }
     };
 
-    window.addEventListener('wheel', handleWheel, { passive: false });
+    window.addEventListener('wheel', handleWheel, { passive: true });
     return () => {
       window.removeEventListener('wheel', handleWheel);
       if (wheelTimeoutRef.current) {
         clearTimeout(wheelTimeoutRef.current);
       }
     };
-  }, [navigateNext, navigatePrev]);
+  }, [navigateNext, navigatePrev, isMobile]);
 
   return (
     <>
       {/* Previous button */}
       {!isFirstSlide && (
         <Button 
-          variant="secondary" 
+          variant="ghost" 
           onClick={navigatePrev}
           className="nav-button nav-button-prev"
           aria-label="Previous slide"
@@ -117,7 +140,7 @@ export function SlideNavigation({ totalSlides, currentSlide, baseRoute }: SlideN
       {/* Next button */}
       {!isLastSlide && (
         <Button 
-          variant="secondary" 
+          variant="ghost" 
           onClick={navigateNext}
           className="nav-button nav-button-next"
           aria-label="Next slide"
@@ -137,6 +160,16 @@ export function SlideNavigation({ totalSlides, currentSlide, baseRoute }: SlideN
           />
         ))}
       </div>
+
+      {/* Follow link */}
+      <a 
+        href="https://x.com/nicholashutfilz" 
+        target="_blank" 
+        rel="noopener noreferrer" 
+        className="follow-link"
+      >
+        Follow Along @NicholasHutfilz
+      </a>
 
       {/* Issue label */}
       <div className="issue-label">

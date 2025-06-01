@@ -1,35 +1,22 @@
-"use client";
-
-import { SlideNavigation } from "@/components/ui/slide-navigation";
-import { notFound } from "next/navigation";
-import { ProjectContent } from "@/components/project-content";
 import { projects } from "@/lib/projects";
+import { notFound } from "next/navigation";
+import ClientPage from "./client-page";
 
-export default function ProjectPage({ params }: { params: { id: string } }) {
-  const projectId = parseInt(params.id);
+// Define specific types for Next.js 15 params
+interface PageProps {
+  params: Promise<{ id: string }>;
+}
+
+export default async function ProjectPage({ params }: PageProps) {
+  // Await the params
+  const resolvedParams = await params;
+  const id = resolvedParams.id;
+  const projectId = parseInt(id);
   const project = projects.find(p => p.id === projectId);
   
-  // Calculate currentSlide (project ID + home page)
-  const currentSlide = projectId;
-  const totalSlides = projects.length + 1;
-
   if (!project) {
     notFound();
   }
 
-  return (
-    <>
-      <ProjectContent 
-        project={project} 
-        projectId={projectId} 
-      />
-
-      {/* Navigation */}
-      <SlideNavigation 
-        totalSlides={totalSlides} 
-        currentSlide={currentSlide} 
-        baseRoute="" 
-      />
-    </>
-  );
+  return <ClientPage project={project} projectId={projectId} />;
 } 

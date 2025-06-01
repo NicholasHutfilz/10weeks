@@ -60,7 +60,6 @@ export default function Home() {
       <SlideNavigation 
         totalSlides={totalSlides} 
         currentSlide={currentSlide} 
-        baseRoute="" 
       />
     </>
   );

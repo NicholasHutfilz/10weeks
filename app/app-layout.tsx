@@ -15,7 +15,7 @@ export default function AppLayout({ children }: PropsWithChildren) {
   
   return (
     <AnimatePresence mode="wait" initial={isFirstRender}>
-      <div key={pathname} className="w-full h-full">
+      <div key={pathname} className="w-full">
         {children}
       </div>
     </AnimatePresence>

@@ -114,6 +114,15 @@
   --sidebar-ring: oklch(0.5 0 0);
 }
 
+/* Fix for mobile scrolling - ensure html and body can scroll */
+html, body {
+  @apply overflow-auto;
+  height: 100%;
+  width: 100%;
+  position: relative;
+  overscroll-behavior-y: none;
+}
+
 @layer base {
   * {
     @apply border-border outline-ring/50;
@@ -158,34 +167,60 @@
   @apply my-8 border-t-2 border-accent w-1/3 mx-auto;
 }
 
-/* Side-scrolling styles */
+/* Side-scrolling styles - adjusted for mobile */
 .slide-container {
-  @apply h-screen w-screen flex flex-col justify-center items-center px-8 md:px-16 lg:px-24;
+  @apply w-full px-6 md:px-16 lg:px-24 py-16 md:py-24;
+  min-height: 100vh;
+  height: auto;
+  overflow-y: auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
 }
 
 .slide-content {
-  @apply max-w-4xl w-full mx-auto;
+  @apply max-w-4xl w-full mx-auto mt-0;
 }
 
 /* Navigation buttons */
 .nav-button {
-  @apply fixed top-1/2 transform -translate-y-1/2 w-12 h-12 md:w-16 md:h-16 
+  @apply fixed top-1/2 transform -translate-y-1/2 
          flex items-center justify-center rounded-full 
-         bg-primary text-primary-foreground opacity-80 hover:opacity-100
-         transition-opacity z-50;
+         transition-all z-50 border border-accent/30
+         opacity-60 hover:opacity-100 hover:bg-accent hover:text-accent-foreground;
+  width: 2.5rem;
+  height: 2.5rem;
+  background-color: rgba(255, 255, 255, 0.8);
+  color: var(--accent);
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+/* Smaller buttons on mobile */
+@media (max-width: 640px) {
+  .nav-button {
+    width: 2rem;
+    height: 2rem;
+    opacity: 0.4;
+  }
+  
+  .nav-button svg {
+    width: 1rem;
+    height: 1rem;
+  }
 }
 
 .nav-button-prev {
-  @apply left-4 md:left-8;
+  @apply left-2 md:left-6;
 }
 
 .nav-button-next {
-  @apply right-4 md:right-8;
+  @apply right-2 md:right-6;
 }
 
 /* Page indicator */
 .page-indicator {
-  @apply fixed bottom-8 left-1/2 transform -translate-x-1/2 
+  @apply fixed bottom-4 left-1/2 transform -translate-x-1/2 
          flex items-center gap-2 z-50;
 }
 
@@ -199,7 +234,12 @@
 
 /* Magazine issue label */
 .issue-label {
-  @apply fixed top-8 right-8 text-sm text-muted-foreground uppercase tracking-wider font-medium z-50 font-heading;
+  @apply fixed top-4 right-4 md:top-8 md:right-8 text-xs md:text-sm text-muted-foreground uppercase tracking-wider font-medium z-50 font-heading;
+}
+
+/* Follow link */
+.follow-link {
+  @apply fixed top-4 left-4 md:top-8 md:left-8 text-xs md:text-sm text-muted-foreground hover:text-accent/80 uppercase tracking-wider font-medium z-50 font-heading transition-colors duration-200;
 }
 
 /* Coming soon slide */
@@ -249,4 +289,45 @@
 /* Hash navigation indicator */
 .hash-indicator {
   @apply fixed bottom-8 left-8 text-sm text-muted-foreground z-50;
+}
+
+/* Mobile-specific styles for better readability */
+@media (max-width: 640px) {
+  html, body {
+    overflow-y: auto !important;
+    height: auto !important;
+    position: relative !important;
+  }
+  
+  .slide-container {
+    min-height: 100vh;
+    height: auto !important;
+    overflow-y: visible !important;
+    padding-top: 4rem;
+    padding-bottom: 4rem;
+  }
+  
+  .slide-content {
+    margin-top: 2rem;
+    margin-bottom: 3rem;
+  }
+  
+  .issue-label {
+    top: 1rem;
+    right: 1rem;
+    font-size: 0.7rem;
+  }
+  
+  .page-indicator {
+    bottom: 1rem;
+  }
+  
+  .indicator-dot {
+    width: 0.4rem;
+    height: 0.4rem;
+  }
+  
+  .indicator-dot.active {
+    width: 0.8rem;
+  }
 }
