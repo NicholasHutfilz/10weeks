@@ -17,7 +17,8 @@ module.exports = {
     },
     extend: {
       fontFamily: {
-        serif: ['Playfair Display', 'serif'],
+        heading: ['var(--font-calben)'],
+        body: ['var(--font-playfair)'],
       },
       colors: {
         border: "var(--border)",

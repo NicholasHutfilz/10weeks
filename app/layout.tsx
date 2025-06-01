@@ -1,6 +1,8 @@
 import type { Metadata } from "next";
 import { Geist, Geist_Mono } from "next/font/google";
+import { calben, playfair } from "./fonts";
 import "./globals.css";
+import AppLayout from "./app-layout";
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -26,9 +28,11 @@ export default function RootLayout({
   return (
     <html lang="en" className="overflow-hidden">
       <body
-        className={`${geistSans.variable} ${geistMono.variable} font-serif antialiased overflow-hidden h-screen`}
+        className={`${geistSans.variable} ${geistMono.variable} ${calben.variable} ${playfair.variable} font-body antialiased overflow-hidden h-screen`}
       >
-        {children}
+        <AppLayout>
+          {children}
+        </AppLayout>
       </body>
     </html>
   );

@@ -1,6 +1,5 @@
 @import "tailwindcss";
 @import "tw-animate-css";
-@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;0,800;0,900;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
 
 @custom-variant dark (&:is(.dark *));
 
@@ -8,7 +7,8 @@
   --color-background: var(--background);
   --color-foreground: var(--foreground);
   --font-sans: var(--font-geist-sans);
-  --font-serif: 'Playfair Display', serif;
+  --font-heading: var(--font-calben);
+  --font-body: var(--font-playfair);
   --font-mono: var(--font-geist-mono);
   --color-sidebar-ring: var(--sidebar-ring);
   --color-sidebar-border: var(--sidebar-border);
@@ -119,10 +119,10 @@
     @apply border-border outline-ring/50;
   }
   body {
-    @apply bg-background text-foreground font-serif;
+    @apply bg-background text-foreground font-body;
   }
   h1, h2, h3, h4, h5, h6 {
-    @apply font-serif font-bold;
+    @apply font-heading font-bold;
   }
 }
 
@@ -136,15 +136,18 @@
 }
 
 .drop-cap:first-letter {
-  @apply text-5xl font-bold float-left mr-2 mt-1;
+  @apply text-5xl font-bold float-left mr-2 mt-1 leading-none pt-0;
+  line-height: 0.8;
+  margin-top: 0.05em;
+  padding-top: 0;
 }
 
 .article-heading {
-  @apply text-4xl md:text-5xl lg:text-6xl font-bold text-primary mb-4 font-serif;
+  @apply text-4xl md:text-5xl lg:text-6xl font-bold text-primary mb-4 font-heading;
 }
 
 .magazine-title {
-  @apply text-5xl md:text-6xl lg:text-7xl font-bold font-serif tracking-tight;
+  @apply text-5xl md:text-6xl lg:text-7xl font-bold font-heading tracking-tight;
 }
 
 .accent-text {
@@ -153,4 +156,97 @@
 
 .magazine-divider {
   @apply my-8 border-t-2 border-accent w-1/3 mx-auto;
+}
+
+/* Side-scrolling styles */
+.slide-container {
+  @apply h-screen w-screen flex flex-col justify-center items-center px-8 md:px-16 lg:px-24;
+}
+
+.slide-content {
+  @apply max-w-4xl w-full mx-auto;
+}
+
+/* Navigation buttons */
+.nav-button {
+  @apply fixed top-1/2 transform -translate-y-1/2 w-12 h-12 md:w-16 md:h-16 
+         flex items-center justify-center rounded-full 
+         bg-primary text-primary-foreground opacity-80 hover:opacity-100
+         transition-opacity z-50;
+}
+
+.nav-button-prev {
+  @apply left-4 md:left-8;
+}
+
+.nav-button-next {
+  @apply right-4 md:right-8;
+}
+
+/* Page indicator */
+.page-indicator {
+  @apply fixed bottom-8 left-1/2 transform -translate-x-1/2 
+         flex items-center gap-2 z-50;
+}
+
+.indicator-dot {
+  @apply w-2 h-2 rounded-full bg-muted transition-all duration-300;
+}
+
+.indicator-dot.active {
+  @apply w-4 bg-accent;
+}
+
+/* Magazine issue label */
+.issue-label {
+  @apply fixed top-8 right-8 text-sm text-muted-foreground uppercase tracking-wider font-medium z-50 font-heading;
+}
+
+/* Coming soon slide */
+.coming-soon {
+  @apply flex flex-col items-center justify-center text-center h-full;
+}
+
+.coming-soon-title {
+  @apply text-3xl md:text-4xl font-bold mb-4 font-heading;
+}
+
+.coming-soon-description {
+  @apply text-xl text-muted-foreground font-heading;
+}
+
+/* Project slide */
+.project-slide {
+  @apply flex flex-col h-full;
+}
+
+.project-header {
+  @apply mb-8;
+}
+
+.project-title {
+  @apply text-4xl md:text-5xl font-bold mb-4 font-heading;
+}
+
+.project-description {
+  @apply text-xl text-muted-foreground mb-8;
+}
+
+/* Keyframe animation for side arrow indicator */
+@keyframes bounceHorizontal {
+  0%, 100% {
+    transform: translateX(0);
+  }
+  50% {
+    transform: translateX(10px);
+  }
+}
+
+.arrow-indicator {
+  @apply animate-[bounceHorizontal_1.5s_ease-in-out_infinite];
+}
+
+/* Hash navigation indicator */
+.hash-indicator {
+  @apply fixed bottom-8 left-8 text-sm text-muted-foreground z-50;
 }
