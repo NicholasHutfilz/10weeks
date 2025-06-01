@@ -77,8 +77,7 @@ export function ProjectContent({ project, projectId }: ProjectContentProps) {
   }, [project.status, projectId]);
 
   // Determine if we should show completed or upcoming template
-  // Special case: Project 1 is always shown as completed, regardless of date
-  const showCompleted = project.status === "completed" || projectId === 1;
+  const showCompleted = project.status === "completed"
 
   return (
     <div className="slide-container">

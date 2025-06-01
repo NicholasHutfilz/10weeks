@@ -13,7 +13,7 @@ export interface Project {
 
 // Projects data
 export const projects: Project[] = [
-  {
+  /* {
     id: 1,
     title: "Interactive Portfolio",
     description: "A responsive portfolio website with interactive elements and smooth animations",
@@ -23,58 +23,64 @@ export const projects: Project[] = [
     technologies: ["Next.js", "Tailwind CSS", "Framer Motion"],
     liveLink: "https://example.com/portfolio",
     githubLink: "https://github.com/example/portfolio",
+  }, */
+  {
+    id: 1,
+    title: "????",
+    description: "Coming soon",
+    status: "upcoming",
   },
   {
     id: 2,
-    title: "Project Two",
+    title: "????",
     description: "Coming soon",
     status: "upcoming",
   },
   {
     id: 3,
-    title: "Project Three",
+    title: "????",
     description: "Coming soon",
     status: "upcoming",
   },
   {
     id: 4,
-    title: "Project Four",
+    title: "????",
     description: "Coming soon",
     status: "upcoming",
   },
   {
     id: 5,
-    title: "Project Five",
+    title: "????",
     description: "Coming soon",
     status: "upcoming",
   },
   {
     id: 6,
-    title: "Project Six",
+    title: "????",
     description: "Coming soon",
     status: "upcoming",
   },
   {
     id: 7,
-    title: "Project Seven",
+    title: "????",
     description: "Coming soon",
     status: "upcoming",
   },
   {
     id: 8,
-    title: "Project Eight",
+    title: "????",
     description: "Coming soon",
     status: "upcoming",
   },
   {
     id: 9,
-    title: "Project Nine",
+    title: "????",
     description: "Coming soon",
     status: "upcoming",
   },
   {
     id: 10,
-    title: "Project Ten",
+    title: "????",
     description: "Coming soon",
     status: "upcoming",
   },

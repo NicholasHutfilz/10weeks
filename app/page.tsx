@@ -22,7 +22,7 @@ export default function Home() {
             <header className="mb-16 text-center">
               <h1 className="magazine-title mb-4">10 WEEKS</h1>
               <Separator className="magazine-divider" />
-              <p className="mt-8 text-xl md:text-2xl italic">A Journey Through Ten Creative Projects</p>
+              <p className="mt-8 text-xl md:text-2xl italic">How Much Can I Improve My Life?</p>
             </header>
 
             {/* Introduction Section */}
@@ -31,14 +31,12 @@ export default function Home() {
                 <h2 className="article-heading mb-6">The Challenge</h2>
                 <div className="column-text">
                   <p className="drop-cap mb-4">
-                    Welcome to <span className="accent-text">10 Weeks</span>, an ambitious journey through ten unique projects. 
-                    Each week, a new creation will be unveiled, showcasing different skills, technologies, and creative visions.
-                    This magazine-style showcase documents the process, challenges, and results of each undertaking.
+                    Welcome to <span className="accent-text">10 Weeks</span>, a journey through ten unique projects. 
+                    The first week of summer slipped by in a haze—no deadlines, no momentum, and no real drive to create. That changes now.
                   </p>
                   <p className="mb-4">
-                    From interactive applications to artistic expressions, each project represents a focused effort to build 
-                    something meaningful in a limited timeframe. Follow along as the collection grows week by week, forming 
-                    a complete portfolio of diverse works.
+                  This showcase is a commitment to action: each week, I’ll take on a new project with real stakes—creative, financial, physical, etc.—and document the process here and on social media. 
+                  Follow along as I learn, build, and grow.
                   </p>
                 </div>
               </div>
