@@ -7,6 +7,13 @@ interface PageProps {
   params: Promise<{ id: string }>;
 }
 
+// Generate static params for all possible project IDs
+export async function generateStaticParams() {
+  return projects.map((project) => ({
+    id: project.id.toString(),
+  }));
+}
+
 export default async function ProjectPage({ params }: PageProps) {
   // Await the params
   const resolvedParams = await params;
