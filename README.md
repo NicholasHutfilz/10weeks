@@ -1,43 +1,5 @@
 # 10 Weeks
 
-A magazine-style showcase website featuring 10 projects over the course of 10 weeks.
+Welcome to 10 Weeks, a journey through ten unique projects. The first week of summer slipped by in a haze—no deadlines, no momentum, and no real drive to create. That changes now.
 
-## Features
-
-- Modern Next.js application with TypeScript
-- Magazine-inspired design with serif typography
-- Greyscale color palette with red accents
-- Responsive layout for all device sizes
-- Shadcn UI components for consistent design
-
-## Design Choices
-
-- **Typography**: Playfair Display serif font for an elegant, editorial feel
-- **Color Scheme**: Primarily greyscale with strategic red accents for emphasis
-- **Layout**: Multi-column text, drop caps, and other magazine-style elements
-- **Components**: Cards, separators, and other UI elements styled to match vintage publication aesthetics
-
-## Tech Stack
-
-- Next.js 15
-- TypeScript
-- Tailwind CSS
-- Shadcn UI
-- React
-- Framer Motion
-
-## Development
-
-```bash
-# Install dependencies
-npm install
-
-# Start development server
-npm run dev
-
-# Build for production
-npm run build
-
-# Start production server
-npm start
-```
+This showcase is a commitment to action: each week, I’ll take on a new project with real stakes—creative, financial, physical, etc.—and document the process here and on social media. Follow along as I learn, build, and grow.
