@@ -26,9 +26,12 @@ export const projects: Project[] = [
   }, */
   {
     id: 1,
-    title: "????",
-    description: "Coming soon",
-    status: "upcoming",
+    title: "Tammany Times",
+    description: "An infinite scroller news website for the Tammany Times, a newsletter on New York politics that I write every morning.",
+    status: "completed",
+    images: ["/images/project1-1.jpg", "/images/project1-2.jpg"],
+    content: "I've been writing the Tammany Times for months now, but I never had a good place to link to full articles written by me. This week I spent time creating the front end website itself, but also a custom backend CMS specifically designed for my needs as a live breaking news website. It is built on NextJS, Tailwind CSS, Heroku, and Postgres. I also spent time this week getting an official New York City Press Credential, which will allow me to better cover political events in the city. This will be an ongoing project as I continue to report on the latest political news, so check it out and subscribe if you are interested!",
+    liveLink: "https://tammanytimes.com",
   },
   {
     id: 2,
