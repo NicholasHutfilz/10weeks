@@ -34,10 +34,13 @@ export const projects: Project[] = [
     liveLink: "https://tammanytimes.com",
   },
   {
-    id: 2,
-    title: "????",
-    description: "Coming soon",
-    status: "upcoming",
+    id: 1,
+    title: "Simple Fitness Tracker",
+    description: "*Work in Progress:* An easy workout tracker that just tells you what to do and keeps you coming back.",
+    status: "completed",
+    images: ["/images/project2-1.jpg", "/images/project2-2.jpg"],
+    content: "This workout tracker, which I have not named yet, is only in the early stages of development. Over the next week, I plan to fully implement it and ideally have it live on the iOS App Store by the end of the week.",
+    liveLink: "https://10weeks.to/project/2",
   },
   {
     id: 3,
