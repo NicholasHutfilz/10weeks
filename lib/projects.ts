@@ -34,7 +34,7 @@ export const projects: Project[] = [
     liveLink: "https://tammanytimes.com",
   },
   {
-    id: 1,
+    id: 2,
     title: "Simple Fitness Tracker",
     description: "*Work in Progress:* An easy workout tracker that just tells you what to do and keeps you coming back.",
     status: "completed",
