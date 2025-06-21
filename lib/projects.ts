@@ -43,7 +43,7 @@ export const projects: Project[] = [
     liveLink: "https://10weeks.to/project/2",
   },
   {
-    id: 2,
+    id: 3,
     title: "Learning Palantir Tools",
     description: "Explored Palantir Foundry and AIP to better understand the platform before starting my Meritocracy Fellowship this August.",
     status: "completed",
