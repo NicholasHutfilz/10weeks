@@ -53,9 +53,12 @@ export const projects: Project[] = [
   },
   {
     id: 4,
-    title: "????",
-    description: "Coming soon",
-    status: "upcoming",
+    title: "Reimagined Alumni Communications",
+    description: "Rethinking how schools communicate with former students, away from infinite donor emails to a more personalized, interactive experience.",
+    status: "completed",
+    images: ["/images/project4-1.jpg", "/images/project4-2.jpg"],
+    content: "I've been wanting to come up with a better way to handle this for a while. Not putting any details here yet, but check back in a few days for the mockups!",
+    liveLink: "https://10weeks.to/project/4",
   },
   {
     id: 5,
