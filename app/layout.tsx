@@ -37,7 +37,7 @@ export default function RootLayout({
           defer
           data-website-id="685eba61f3cb052a10731155"
           data-domain="10weeks.to"
-          src="https://datafa.st/js/script.js"
+          src="/js/script.js"
         />
       </head>
       <body
