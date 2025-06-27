@@ -3,6 +3,7 @@ import { Geist, Geist_Mono } from "next/font/google";
 import { calben, playfair } from "./fonts";
 import "./globals.css";
 import AppLayout from "./app-layout";
+import Script from "next/script";
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -31,6 +32,14 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
+      <head>
+        <Script
+          defer
+          data-website-id="685eba61f3cb052a10731155"
+          data-domain="10weeks.to"
+          src="https://datafa.st/js/script.js"
+        />
+      </head>
       <body
         className={`${geistSans.variable} ${geistMono.variable} ${calben.variable} ${playfair.variable} font-body antialiased`}
       >
