@@ -53,7 +53,7 @@ export const projects: Project[] = [
   },
   {
     id: 4,
-    title: "Reimagined Alumni Communications",
+    title: "Reunion",
     description: "Rethinking how schools communicate with former students, away from infinite donor emails to a more personalized, interactive experience.",
     status: "completed",
     images: ["/images/project4-1.jpg", "/images/project4-2.jpg"],
@@ -62,9 +62,12 @@ export const projects: Project[] = [
   },
   {
     id: 5,
-    title: "????",
-    description: "Coming soon",
-    status: "upcoming",
+    title: "X Link Fixer",
+    description: "Removing the negative algorithm effect from posting links by giving you the option to replace it with zero width whitespace characters.",
+    status: "completed",
+    images: ["/images/project5-1.jpg", "/images/project5-2.jpg"],
+    content: "I’ve never built a chrome extension before, so I am looking forward to exploring how it works this week. This extension will fix the negative algorithm effect from posting links by giving you the option to replace it with zero width whitespace characters. This project is inspired by @chribjel.",
+    liveLink: "https://10weeks.to/project/5",
   },
   {
     id: 6,
