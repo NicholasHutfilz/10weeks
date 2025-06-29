@@ -57,7 +57,7 @@ export const projects: Project[] = [
     description: "Rethinking how schools communicate with former students, away from infinite donor emails to a more personalized, interactive experience.",
     status: "completed",
     images: ["/images/project4-1.jpg", "/images/project4-2.jpg"],
-    content: "I've been wanting to come up with a better way to handle this for a while. So far I have crafted the backend for alumni office staff to use. This is a NextJS, Shadcn/ui, and Supabase project. I'm beginning development on the SMS based frontend on day 5, and will hopefully have it done by the end of the week. That will be using Twilio, Python, OpenRouter, and Supabase.",
+    content: "I’ve long wanted to build a smarter way for schools to engage their graduates beyond email blasts, and now I’ve launched a fully featured, SMS-powered alumni communications platform. The admin dashboard, built with Next.js, shadcn/ui, and Supabase, enables staff to design and send personalized, two-way text campaigns for reunions, fundraising drives, volunteer mobilization, and data collection. The SMS frontend, powered by Twilio, Python, OpenRouter, and Supabase, delivers real-time conversations, RSVP tracking, peer-to-peer asks, and donor reminders. With live analytics for delivery, open, reply, and donation rates, this end-to-end solution is live and available. If you’re at a school ready to transform alumni outreach, reach out to schedule a demo or book a consult!",
     liveLink: "https://reunion.chat",
   },
   {
