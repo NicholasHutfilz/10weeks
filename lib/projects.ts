@@ -58,7 +58,7 @@ export const projects: Project[] = [
     status: "completed",
     images: ["/images/project4-1.jpg", "/images/project4-2.jpg"],
     content: "I've been wanting to come up with a better way to handle this for a while. So far I have crafted the backend for alumni office staff to use. This is a NextJS, Shadcn/ui, and Supabase project. I'm beginning development on the SMS based frontend on day 5, and will hopefully have it done by the end of the week. That will be using Twilio, Python, OpenRouter, and Supabase.",
-    liveLink: "https://10weeks.to/project/4",
+    liveLink: "https://reunion.chat",
   },
   {
     id: 5,
