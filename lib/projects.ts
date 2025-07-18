@@ -80,13 +80,22 @@ export const projects: Project[] = [
   },
   {
     id: 7,
+    title: "Frank",
+    description: "An open source AI-powered project management tool for modern teams.",
+    status: "completed",
+    images: ["/images/project7-1.jpg", "/images/project7-2.jpg"],
+    content: "I’ve built Frank, the first open‑source, AI‑powered alternative to Trello that puts productivity front and center. Intelligent automations triage new tasks, suggest optimal assignees based on capacity, and surface looming roadblocks before they become bottlenecks. Fully self‑hostable and community‑driven, Frank’s transparent codebase lets you extend functionality, integrate with existing tools, or swap in custom plugins—no vendor lock‑in ever. Whether you’re a one‑person startup or a global enterprise, Frank empowers your team to manage projects on your own terms.",
+    liveLink: "https://onfrank.com",
+  },
+  /* { THIS IS ON PAUSE FOR NOW
+    id: 7,
     title: "Language Learning Teddy Bear",
     description: "A talking teddy bear that helps kids practice foreign languages through AI-guided conversations.",
     status: "completed",
     images: ["/images/project7-1.jpg", "/images/project7-2.jpg"],
     content: "I’m midway through my first real hardware project, a talking bear that helps kids practice foreign languages through AI‑guided conversations. Powered by a Raspberry Pi Zero, inexpensive microphones and speakers, and an OpenAI‑backed dialogue engine, the teddy bear listens, responds, and gently corrects pronunciation in English, Spanish, and beyond. Its colorful LEDs cue turn‑taking, and offline caching ensures smooth interactions even without Wi‑Fi. While I’m still fine‑tuning the hardware assembly and conversation modules, I’m on track to have a fully functioning prototype by week’s end—bringing screen‑free language learning into cuddly, conversational form.",
     liveLink: "https://10weeks.to/project/7",
-  },
+  }, */
   {
     id: 8,
     title: "????",
