@@ -98,9 +98,12 @@ export const projects: Project[] = [
   }, */
   {
     id: 8,
-    title: "????",
-    description: "Coming soon",
-    status: "upcoming",
+    title: "URLFast",
+    description: "Helping every project have the perfect domain name.",
+    status: "completed",
+    images: ["/images/project8-1.jpg", "/images/mockupcomingsoon.jpg"],
+    content: "Over these last 7 weeks, one of the biggest problems I have faced has been naming each new project. Finding a good balance of something that is both short, easy to find, and has an available domain has been a constant problem for me. That is why I have built URLFa.st, a tool that helps you find your perfect domain, every time. By searching through hundreds of domains to find you the perfect one automatically, it can save you a ton of time and get you the right domain for a good price every time. This is also the first project I launched this week with Stripe payments, the rest of it was built with NextJS, Supabase, OpenRouter, and Namecheap.",
+    liveLink: "https://urlfa.st",
   },
   {
     id: 9,
