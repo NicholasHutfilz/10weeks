@@ -116,8 +116,11 @@ export const projects: Project[] = [
   },
   {
     id: 10,
-    title: "????",
-    description: "Coming soon",
-    status: "upcoming",
+    title: "Personal CRM",
+    description: "Making the most of the connections I made this summer.",
+    status: "completed",
+    images: ["/images/mockupcomingsoon.jpg", "/images/mockupcomingsoon.jpg"],
+    content: "I've been working on a lot of projects this summer, and I've met a ton of super interesting people. I've been thinking about how I can make the most of these connections, and I've decided to build a personal CRM to help me keep track of everyone I've met.",
+    liveLink: "https://10weeks.to/project/10",
   },
 ]; 
